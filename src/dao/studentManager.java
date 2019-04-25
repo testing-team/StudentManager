@@ -23,6 +23,7 @@ public class studentManager {
             case "2":
                 System.out.println("请输入要查找的学生姓名：");
                 Scanner scanner2 = new Scanner(System.in);
+                selectStudent.selectStudent(scanner2.next(),stuList);
                 break;
             case "3":
                 System.out.println("请输入要删除的学生姓名：");
