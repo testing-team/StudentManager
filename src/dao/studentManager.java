@@ -31,8 +31,25 @@ public class studentManager {
                 deleteStudent.deleteStudent(scanner3.next(),stuList);
                 break;
             case "4":
+                Student student1 = new Student();
                 System.out.println("请输入要修改的学生姓名：");
                 Scanner scanner4 = new Scanner(System.in);
+                for (int i = 0; i < stuList.size(); i++) {
+                    String item = stuList.get(i).getName();
+                    if (scanner4.next().equals(item)) {
+                        student1 = stuList.get(i);
+                        System.out.println("学生当前信息为：" + stuList.get(i).getId() + "\t" + stuList.get(i).getName() + "\t" + stuList.get(i).getBirDate() + "\t" + stuList.get(i).getGender());
+                        System.out.println("请输入要修改的学生信息(生日 性别)：");
+                        Scanner scanner5 = new Scanner(System.in);
+                        student1.setBirDate(scanner5.next());
+                        student1.setGender(scanner5.next());
+                        updateStudent.updateStudent(i,student1,stuList);
+                        break;
+                    }
+                    if (i == stuList.size() - 1) {
+                        System.out.println("没有姓名为" + scanner4 + "的学生");
+                    }
+                }
                 break;
             case "5":
                 System.out.println(stuList);
