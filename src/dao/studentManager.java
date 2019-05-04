@@ -1,4 +1,4 @@
-package dao;
+﻿package dao;
 
 import entity.Student;
 
@@ -9,6 +9,7 @@ public class studentManager {
 
     public static void app(String str, List<Student> stuList,List<Integer> flag){
         switch (str){
+	//输入要插入的学生(学号 姓名 生日 性别)
             case "1":
                 System.out.println("请输入要插入的学生(学号 姓名 生日 性别)：");
                 Scanner scanner1 = new Scanner(System.in);
@@ -19,17 +20,19 @@ public class studentManager {
                 student.setGender(scanner1.next());
                 insertStudent.insertStudent(student,stuList);
                 break;
-
+	//输入要查找的学生姓名
             case "2":
                 System.out.println("请输入要查找的学生姓名：");
                 Scanner scanner2 = new Scanner(System.in);
                 selectStudent.selectStudent(scanner2.next(),stuList);
                 break;
+	//请输入要删除的学生姓名
             case "3":
                 System.out.println("请输入要删除的学生姓名：");
                 Scanner scanner3 = new Scanner(System.in);
                 deleteStudent.deleteStudent(scanner3.next(),stuList);
                 break;
+	//请输入要修改的学生姓名
             case "4":
                 Student student1 = new Student();
                 System.out.println("请输入要修改的学生姓名：");
