@@ -1,15 +1,20 @@
 package entity;
 
+/**
+ * student实体类
+ */
+
 public class Student {
 
-    private int id;
+    private int id;//学号
 
-    private  String name;
+    private  String name;//姓名
 
-    private String birDate;
+    private String birDate;//生日
 
-    private String gender;
+    private String gender;//性别
 
+    //get、set方法
     public int getId() {
         return id;
     }
@@ -42,6 +47,7 @@ public class Student {
         this.gender = gender;
     }
 
+    //重写tostring方法
     @Override
     public String toString() {
         return "Student{" +
