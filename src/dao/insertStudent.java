@@ -6,12 +6,15 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+/**
+ * 插入学生信息
+ */
+
 public class insertStudent {
 
     public  static void insertStudent(Student student, List<Student> stuList){
 
                 stuList.add(student);
-
 
                 Collections.sort(stuList, new Comparator<Student>() {
                     @Override
